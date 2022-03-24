@@ -56,30 +56,30 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-user me-2"></i>Alumnos</a>
                         <div class="dropdown-menu bg-light border-0">
-                            <a href="#" class="dropdown-item">Consultar</a>
-                            <a href="#" class="dropdown-item">Insertar</a>
-                            <a href="#" class="dropdown-item">Editar</a>
-                            <a href="#" class="dropdown-item">Eliminar</a>
+                            <a href="../Alumnos/al-consultar.php" class="dropdown-item">Consultar</a>
+                            <a href="../Alumnos/al-insertar.php" class="dropdown-item">Insertar</a>
+                            <a href="../Alumnos/al-actualizar.php" class="dropdown-item">Editar</a>
+                            <a href="../Alumnos/al-eliminar.php" class="dropdown-item">Eliminar</a>
                         </div>
                     </div>
 
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-user-check me-2"></i>Asesores</a>
                         <div class="dropdown-menu bg-light border-0">
-                            <a href="#" class="dropdown-item">Consultar</a>
-                            <a href="#" class="dropdown-item">Insertar</a>
-                            <a href="#" class="dropdown-item">Editar</a>
-                            <a href="#" class="dropdown-item">Eliminar</a>
+                            <a href="../Asesores/as-consultar.php" class="dropdown-item">Consultar</a>
+                            <a href="../Asesores/as-insertar.php" class="dropdown-item">Insertar</a>
+                            <a href="../Asesores/as-actualizar.php" class="dropdown-item">Editar</a>
+                            <a href="../Asesores/as-eliminar.php" class="dropdown-item">Eliminar</a>
                         </div>
                     </div>
 
-                    <div class="nav-item dropdown">
+<div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-briefcase me-2"></i>Empresas</a>
                         <div class="dropdown-menu bg-light border-0">
-                            <a href="#" class="dropdown-item">Consultar</a>
-                            <a href="#" class="dropdown-item">Insertar</a>
-                            <a href="#" class="dropdown-item">Editar</a>
-                            <a href="#" class="dropdown-item">Eliminar</a>
+                            <a href="../Empresas/em-consultar.php" class="dropdown-item">Consultar</a>
+                            <a href="../Empresas/em-insertar.php" class="dropdown-item">Insertar</a>
+                            <a href="../Empresas/em-actualizar.php" class="dropdown-item">Editar</a>
+                            <a href="../Empresas/em-eliminar.php" class="dropdown-item">Eliminar</a>
                         </div>
                     </div>
 
@@ -143,15 +143,12 @@
 
 
             <!-- Contenido principal -->
+            <?php require '../../conexion.php'; ?>
             <body>
                 <header><h1>Alumnos</h1></header>
                 <div class="container">
                 <input type="search" name="Buscar" id=""><button><a href="">Buscar</a></button>
-                <div class="container">
-                    <button><a href="insertar_alumno.php">insertar</a></button>
-                    <button><a href="eliminar_alumno.php">eliminar</a></button>
-                    <button><a href="actualizar_alumno.php">actualizar</a></button>
-                </div>
+
                 <div class="container">
                     <table>Datos de los Alumnos
                         <tr>
@@ -169,26 +166,32 @@
                             <td>Campus</td>
                         </tr>
                         <?php
-                        $sql="CALL consultar_alumnos()";
-                        $result=mysqli_query($conn,$sql);
-                        while($mostrar=mysqli_fetch_array($result)){
-                        ?>
+                        $sql = 'CALL consultar_alumnos()';
+                        $result = mysqli_query($conn, $sql);
+                        while ($mostrar = mysqli_fetch_array($result)) { ?>
                         <tr>
-                            <td><?php echo $mostrar['Matricula']?> </td>
-                            <td><?php echo $mostrar['Nombre_alumno']?> </td>
-                            <td><?php echo $mostrar['Ap_paterno_alumno']?> </td>
-                            <td><?php echo $mostrar['Ap_materno_alumno']?> </td>
-                            <td><?php echo $mostrar['Domicilio']?> </td>
-                            <td><?php echo $mostrar['Sexo']?> </td>
-                            <td><?php echo $mostrar['IMSS']?> </td>
-                            <td><?php echo $mostrar['CURP']?> </td>
-                            <td><?php echo $mostrar['Correo_electronico']?> </td>
-                            <td><?php echo $mostrar['id_grupo_fk']?> </td>
-                            <td><?php echo $mostrar['id_cuatrimestre_fk']?> </td>
-                            <td><?php echo $mostrar['id_campus_fk']?> </td>
+                            <td><?php echo $mostrar['Matricula']; ?> </td>
+                            <td><?php echo $mostrar['Nombre_alumno']; ?> </td>
+                            <td><?php echo $mostrar[
+                                'Ap_paterno_alumno'
+                            ]; ?> </td>
+                            <td><?php echo $mostrar[
+                                'Ap_materno_alumno'
+                            ]; ?> </td>
+                            <td><?php echo $mostrar['Domicilio']; ?> </td>
+                            <td><?php echo $mostrar['Sexo']; ?> </td>
+                            <td><?php echo $mostrar['IMSS']; ?> </td>
+                            <td><?php echo $mostrar['CURP']; ?> </td>
+                            <td><?php echo $mostrar[
+                                'Correo_electronico'
+                            ]; ?> </td>
+                            <td><?php echo $mostrar['id_grupo_fk']; ?> </td>
+                            <td><?php echo $mostrar[
+                                'id_cuatrimestre_fk'
+                            ]; ?> </td>
+                            <td><?php echo $mostrar['id_campus_fk']; ?> </td>
                         </tr>
-                        <?php
-                        }
+                        <?php }
                         ?>
                     </table>
 

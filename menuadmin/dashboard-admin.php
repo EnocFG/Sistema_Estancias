@@ -55,20 +55,20 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-user me-2"></i>Alumnos</a>
                         <div class="dropdown-menu bg-light border-0">
-                            <a href="Datos/Alumnos/al-consultar.php" class="dropdown-item">Consultar</a>
-                            <a href="#" class="dropdown-item">Insertar</a>
-                            <a href="#" class="dropdown-item">Editar</a>
-                            <a href="#" class="dropdown-item">Eliminar</a>
+                            <a href="../menuadmin/Datos/Alumnos/al-consultar.php" class="dropdown-item">Consultar</a>
+                            <a href="../menuadmin/Datos/Alumnos/al-insertar.php" class="dropdown-item">Insertar</a>
+                            <a href="../menuadmin/Datos/Alumnos/al-insertar.php" class="dropdown-item">Editar</a>
+                            <a href="../menuadmin/Datos/Alumnos/al-eliminar.php" class="dropdown-item">Eliminar</a>
                         </div>
                     </div>
 
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-user-check me-2"></i>Asesores</a>
                         <div class="dropdown-menu bg-light border-0">
-                            <a href="#" class="dropdown-item">Consultar</a>
-                            <a href="#" class="dropdown-item">Insertar</a>
-                            <a href="#" class="dropdown-item">Editar</a>
-                            <a href="#" class="dropdown-item">Eliminar</a>
+                            <a href="../menuadmin/Datos/Asesores/as-consultar.php" class="dropdown-item">Consultar</a>
+                            <a href="../menuadmin/Datos/Asesores/as-insertar.php" class="dropdown-item">Insertar</a>
+                            <a href="../menuadmin/Datos/Asesores/as-actualizar.php" class="dropdown-item">Editar</a>
+                            <a href="../menuadmin/Datos/Asesores/as-eliminar.php" class="dropdown-item">Eliminar</a>
                         </div>
                     </div>
 
@@ -143,69 +143,7 @@
 
             <!-- Contenido principal -->
             
-            <?php
-require '../../conexion.php'; ?>
-
-
-<body class="container">
-  <header>
-    <h1>Alumnos</h1>
-  </header>
-  <div class=" container">
-
-    <div class="container">
-      <a class=" btn btn-primary" href="insertar_alumno.php">insertar</a>
-      <a class="btn btn-primary" href="eliminar_alumno.php">eliminar</a>
-      <a class="btn btn-primary" href="actualizar_alumno.php">actualizar</a>
-      <input class="btn btn-secondary" type="submit" name="Menú" onclick="location.href='../menuad.php'" value="Menú">
-    </div>
-    <div class="container">
-      <h2>Lista de alumnos</h2>
-      <table class="table table-hover">
-
-        <thead>
-          <tr>
-            <td>Matricula</td>
-            <td>Nombre</td>
-            <td>Ap Paterno</td>
-            <td>Ap Materno</td>
-            <td>Domicilio</td>
-            <td>Sexo</td>
-            <td>IMSS</td>
-            <td>CURP</td>
-            <td>Correo</td>
-            <td>Grupo</td>
-            <td>Cuatrimestre</td>
-            <td>Campus</td>
-          </tr>
-        </thead>
-        <?php
-        $sql = 'CALL consultar_alumnos()';
-        $result = mysqli_query($conn, $sql);
-        while ($mostrar = mysqli_fetch_array($result)) { ?>
-        <tr>
-          <td><?php echo $mostrar['Matricula']; ?> </td>
-          <td><?php echo $mostrar['Nombre_alumno']; ?> </td>
-          <td><?php echo $mostrar['Ap_paterno_alumno']; ?> </td>
-          <td><?php echo $mostrar['Ap_materno_alumno']; ?> </td>
-          <td><?php echo $mostrar['Domicilio']; ?> </td>
-          <td><?php echo $mostrar['Sexo']; ?> </td>
-          <td><?php echo $mostrar['IMSS']; ?> </td>
-          <td><?php echo $mostrar['CURP']; ?> </td>
-          <td><?php echo $mostrar['Correo_electronico']; ?> </td>
-          <td><?php echo $mostrar['id_grupo_fk']; ?> </td>
-          <td><?php echo $mostrar['id_cuatrimestre_fk']; ?> </td>
-          <td><?php echo $mostrar['id_campus_fk']; ?> </td>
-        </tr>
-        <?php }
-        ?>
-      </table>
-
-    </div>
-
-</body>
-
-</html>
+           
 
             <!-- Fin del Contenido Principal -->
 

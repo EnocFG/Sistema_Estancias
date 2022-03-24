@@ -30,6 +30,7 @@
     <!-- Template Stylesheet -->
     <link href="../../css/style.css" rel="stylesheet">
     <link href="../../css/styles.css" rel="stylesheet">
+    <link href="../botones.css">
 </head>
 
 <body>
@@ -142,97 +143,41 @@
 
 
             <!-- Contenido principal -->
-<body>
-    <h1>Actualizando Alumno</h1>
-    <form action="../Alumnos/validations/validar_insertar.php" method="POST">
- 
-    <input type="text" id="Matricula" name="Matricula" placeholder="matricula" class="input" onblur="buscar_datos();"><br>
-        <input type="text" id="Nombre_alumno" name="Nombre_alumno" placeholder="nombre" class="input" required><br>
-        <input type="text" id="Ap_paterno_alumno" name="Ap_paterno_alumno" placeholder="apellido paterno" class="input" required><br>
-        <input type="text" id="Ap_materno_alumno" name="Ap_materno_alumno" placeholder="apellido materno" class="input" required><br>
-        <input type="text" id="Domicilio" name="Domicilio" placeholder="domicilio" class="input" required><br>
-        <input type="text" id="Sexo" name="Sexo" placeholder="sexo" class="input" required><br>
-        <input type="text" id="IMSS" name="IMSS" placeholder="num. imss" class="input" required><br>
-        <input type="text" id="CURP" name="CURP" placeholder="curp" class="input" required><br>
-        <input type="email" id="Correo_electronico" name="Correo_electronico" placeholder="&#64 correo electronico" class="input" required><br>
-        <input type="text" id="id_grupo_fk" name="id_grupo_fk" placeholder="id_grupo" class="input" required><br>        
-        <input type="text" id="id_cuatrimestre_fk" name="id_cuatrimestre_fk" placeholder="id_cuatrimestre" class="input" required><br>
-        <input type="text" id="id_campus_fk" name="id_campus_fk" placeholder="id_campus" class="input" required><br>
-        <br>
-        <input type="submit" value="insertar">
-        <input type="submit" id="Cancelar" name="Cancelar" value="Cancelar" onclick="limpiar();">
-    </form>
-    <input type="submit" name="Menú" onclick="location.href='../Alumnos/menu_alumnos.php'" value="Menú">
-</body>
-<script type="text/javascript">
-      $(document).ready(function(){
-        $('.cargando').hide(); //ocultar
-      });  
-    function buscar_datos(){
-        
-        Matricula = $("#Matricula").val();
-    
-    var parametros =
-    {
-      "buscar": "1",
-      "Matricula" : Matricula
+            <?php require '../../conexion.php'; ?>
+<header><h1>Empresas</h1></header>
+    <div class="container">
+        datos de empresas
+    </div>
+    <div>
+        <label for="">buscar</label>
+        <input type="search" name="" id="">
+    </div>
+    <div class="container">
+        <table>Datos de las Empresas
+            <tr>
+                <td>ID Empresa</td>
+                <td>Nombre</td>
+                <td>Domicilio</td>
+                <td>Telefono</td>
+                <td>Correo Electronico</td>
+            </tr>
+            <?php
+            $sql = 'CALL consultar_empresas()';
+            $result = mysqli_query($conn, $sql);
+            while ($mostrar = mysqli_fetch_array($result)) { ?>
+            <tr>
+                <td><?php echo $mostrar['id_empresa']; ?></td>
+                <td><?php echo $mostrar['Nombre_empresa']; ?></td>
+                <td><?php echo $mostrar['Domicilio_empresa']; ?></td>
+                <td><?php echo $mostrar['Telefono_empresa']; ?></td>
+                <td><?php echo $mostrar['Correo_electronico']; ?></td>
+            </tr>
+            <?php }
+            ?>
+        </table>
+    </div>
 
-    };
-    $.ajax(
-    {
-      data:  parametros,
-      dataType: 'json',
-      url:   '../Alumnos/functions/buscar_datos.php',
-      type:  'post',
-      beforeSend: function()
-      {
-          $('.formulario').hide();
-          $('.cargando').show();
-          
-        },
-      error: function()
-      {
-          alert("Error");
-        },
-      complete: function()
-      {
-        $('.formulario').show();
-        $('.cargando').hide();
-        },
-      success:  function (valores)
-      {
-        $("#Nombre_alumno").val(valores.Nombre_alumno);
-        $("#Ap_paterno_alumno").val(valores.Ap_paterno_alumno);
-        $("#Ap_materno_alumno").val(valores.Ap_materno_alumno);
-        $("#Domicilio").val(valores.Domicilio);
-        $("#Sexo").val(valores.Sexo);
-        $("#IMSS").val(valores.IMSS);
-        $("#CURP").val(valores.CURP);
-        $("#Correo_electronico").val(valores.Correo_electronico);
-        $("#id_grupo_fk").val(valores.id_grupo_fk);
-        $("#id_cuatrimestre_fk").val(valores.id_cuatrimestre_fk);
-        $("#id_campus_fk").val(valores.id_campus_fk);   
-      }
-    })
-    }
-  function limpiar()
-  {
-        $("#Matricula").val("");    
-        $("#Nombre_alumno").val("");
-        $("#Ap_paterno_alumno").val("");
-        $("#Ap_materno_alumno").val("");
-        $("#Domicilio").val("");
-        $("#Sexo").val("");
-        $("#IMSS").val("");
-        $("#CURP").val("");
-        $("#Correo_electronico").val("");
-        $("#id_grupo_fk").val("");
-        $("#id_cuatrimestre_fk").val("");
-        $("#id_campus_fk").val(""); 
-
-  }
-  
-</script>
+    <input type="submit" name="Menú" onclick="location.href='../menuad.php'" value="Menú">
             <!-- Fin del Contenido Principal -->
 
 
