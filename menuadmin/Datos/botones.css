@@ -1,0 +1,19 @@
+button {
+    margin: .5rem;
+    width: calc(50% - 10px);
+    border: none;
+    background: rgb(118, 160, 109);
+    cursor: pointer;
+    border-radius: 10px;
+    border: 0px solid black;
+    color: white;
+    height: 40px;
+    align-items: center;
+  
+    box-shadow: 0 0 40px 40px  rgb(118, 160, 109) inset, 0 0 0 0  rgb(118, 160, 109);
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+  }
+button:hover{
+    box-shadow: 0 0 3px 0 transparent inset, 0 0 1px 2px rgba(0, 0, 0, 0.397);
+}

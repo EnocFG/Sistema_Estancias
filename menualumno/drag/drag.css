@@ -1,0 +1,99 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+    margin: 0;
+    padding: 0;
+    background-color: #242930;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif ;
+}
+.encabezado{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 2rem;
+    color: whitesmoke;
+    position: fixed;
+    transform: translateY(-480%);
+    display: flex;
+}
+.drop-area{
+    border: 5px dashed rgb(177, 177, 177);
+    box-shadow:0 0 10px 0 #000;
+    height: 500px;
+    width: 700px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.drop-area.active{
+    background-color: #63748b1a;
+    color: whitesmoke;
+    border: 5px dashed rgb(114, 190, 96);
+
+}
+.drop-area h2{
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(185, 185, 185);
+    text-align-last: center;
+}
+.drop-area button{
+    padding: 10px 25px;
+    font-size: 20px;
+    border: 0;
+    outline: none;
+    background-color: rgb(118, 160, 109);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.file-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: solid 1px whitesmoke;
+}
+#preview{
+    margin-top: 10px;
+}
+.status-text{
+    padding: 0 10px;
+}
+.success{
+    color: rgb(114, 190, 96);
+}
+.failure{
+    color: rgb(226, 59, 59);
+}
+input[type='submit']{
+    padding: 10px 25px;
+    font-size: 20px;
+    border: 0;
+    outline: none;
+    background-color: #8a540b;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    
+    margin-top: 20px;
+    position: fixed;
+    transform: translateX(345%);
+    display: flex;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background: #242930;
+    border-radius: 50px;
+}
+::-webkit-scrollbar-thumb{
+    background: #525c66;
+    border-radius: 50px;
+}
