@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
@@ -35,7 +35,7 @@
 
 <body>
     <div class="container-xxl position-relative bg-dark d-flex p-0">
-        
+
         <!-- Sidebar Start -->
         <div class="sidebar pe-4 pb-3">
             <nav class="navbar bg-dark navbar-dark">
@@ -94,11 +94,11 @@
         <div class="content">
             <!-- Inicio-->
             <nav class="navbar navbar-expand bg-dark navbar-dark sticky-top px-4 py-0">
-                
+
                 <a href="#" class="sidebar-toggler flex-shrink-0">
                     <i class="fa fa-bars"></i>
                 </a>
-                
+
                 <div class="navbar-nav align-items-center ms-auto">
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
@@ -143,17 +143,14 @@
 
 
             <!-- Contenido principal -->
-            <?php require '../../conexion.php'; ?>
+            <?php require '../../conexion.php';?>
 <header><h1>Empresas</h1></header>
     <div class="container">
         datos de empresas
     </div>
-    <div>
-        <label for="">buscar</label>
-        <input type="search" name="" id="">
-    </div>
+
     <div class="container">
-        <table>Datos de las Empresas
+        <table class="table table-responsive table-hover table-bordered table-dark" >Datos de las Empresas
             <tr>
                 <td>ID Empresa</td>
                 <td>Nombre</td>
@@ -162,9 +159,9 @@
                 <td>Correo Electronico</td>
             </tr>
             <?php
-            $sql = 'CALL consultar_empresas()';
-            $result = mysqli_query($conn, $sql);
-            while ($mostrar = mysqli_fetch_array($result)) { ?>
+$sql = 'CALL consultar_empresas()';
+$result = mysqli_query($conn, $sql);
+while ($mostrar = mysqli_fetch_array($result)) {?>
             <tr>
                 <td><?php echo $mostrar['id_empresa']; ?></td>
                 <td><?php echo $mostrar['Nombre_empresa']; ?></td>
@@ -173,7 +170,7 @@
                 <td><?php echo $mostrar['Correo_electronico']; ?></td>
             </tr>
             <?php }
-            ?>
+?>
         </table>
     </div>
 
@@ -182,7 +179,7 @@
 
 
             <!-- Pie de Página -->
-            
+
         <!-- Content End -->
 
 

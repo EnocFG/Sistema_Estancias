@@ -201,9 +201,9 @@
                         <?php }
                         ?>
                     </table>
-
+ <input type="button" name="Menú" onclick="location.href='../../dashboard-admin.php'" value="Menú">
                 </div>
-                <input type="submit" name="Menú" onclick="location.href='../menuad.php'" value="Menú">
+               
             </body>
             <!-- Fin del Contenido Principal -->
 

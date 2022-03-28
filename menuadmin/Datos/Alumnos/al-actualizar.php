@@ -158,6 +158,7 @@
                 <label for="">ID cuatrimestre <input type="text" name="id_cuatrimestre_fk" id=""></label><br>
                 <label for="">ID campus <input type="text" name="id_campus_fk" id=""></label><br>
                 <input type="submit" value="actualizar">
+                <input type="button" name="Menú" onclick="location.href='../../dashboard-admin.php'" value="Menú">
             </form>
 <script type="text/javascript">
       $(document).ready(function(){

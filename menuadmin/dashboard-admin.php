@@ -75,10 +75,10 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-briefcase me-2"></i>Empresas</a>
                         <div class="dropdown-menu bg-light border-0">
-                            <a href="#" class="dropdown-item">Consultar</a>
-                            <a href="#" class="dropdown-item">Insertar</a>
-                            <a href="#" class="dropdown-item">Editar</a>
-                            <a href="#" class="dropdown-item">Eliminar</a>
+                            <a href="../menuadmin/Datos/Empresas/em-consultar.php" class="dropdown-item">Consultar</a>
+                            <a href="../menuadmin/Datos/Empresas/em-insertar.php" class="dropdown-item">Insertar</a>
+                            <a href="../menuadmin/Datos/Empresas/em-actualizar.php" class="dropdown-item">Editar</a>
+                            <a href="../menuadmin/Datos/Empresas/em-eliminar.php" class="dropdown-item">Eliminar</a>
                         </div>
                     </div>
 

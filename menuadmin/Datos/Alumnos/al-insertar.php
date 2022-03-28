@@ -161,8 +161,9 @@
         <br>
         <input type="submit" value="insertar">
         <input type="submit" id="Cancelar" name="Cancelar" value="Cancelar" onclick="limpiar();">
+         <input type="button" name="Menú" onclick="location.href='../../dashboard-admin.php'" value="Menú">
     </form>
-    <input type="submit" name="Menú" onclick="location.href='../Alumnos/menu_alumnos.php'" value="Menú">
+
 </body>
 <script type="text/javascript">
       $(document).ready(function(){

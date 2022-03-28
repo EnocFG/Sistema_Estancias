@@ -147,7 +147,7 @@
  <header><h1>Asesores Academicos</h1></header>
 
     <div class="container">
-        <table>Datos de los Asesores
+        <table class="table table-responsive table-hover table-bordered table-dark">Datos de los Asesores
             <tr>
                 <td>ID asesor</td>
                 <td>Nombre</td>
