@@ -1,0 +1,24 @@
+{
+  "name": "sistema_estancias",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EnocFG/Sistema_Estancias.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EnocFG/Sistema_Estancias/issues"
+  },
+  "homepage": "https://github.com/EnocFG/Sistema_Estancias#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "mysql": "^2.18.1"
+  }
+}

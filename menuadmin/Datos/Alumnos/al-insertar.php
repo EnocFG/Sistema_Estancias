@@ -229,9 +229,11 @@
         $("#Correo_electronico").val("");
         $("#id_grupo_fk").val("");
         $("#id_cuatrimestre_fk").val("");
-        $("#id_campus_fk").val(""); 
+        $("#id_campus_fk").val("");
 
   }
+        //
+
   
 </script>
             <!-- Fin del Contenido Principal -->
