@@ -145,7 +145,7 @@
             <!-- Contenido principal -->
 <header><h1>Empresa</h1></header>
     <div class="resultados">
-    <form method="POST" action="validar_insertar.php">
+    <form method="POST" action="./validations/validar_insertar.php">
      
 
         <input type="hidden" name="action" id="action">
@@ -174,7 +174,7 @@
         
         <input type="submit" name="Enviar" value="insertar" onclick="" >
     </form>
-    <input type="submit" name="Menú" onclick="location.href='../Empresas/menu_empresas.php'" value="Menú">
+    <input type="button" name="Menú" onclick="location.href='./em-consultar.php'" value="Menú">
     </div>
             <!-- Fin del Contenido Principal -->
 

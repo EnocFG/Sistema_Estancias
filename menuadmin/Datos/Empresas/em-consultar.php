@@ -177,7 +177,7 @@
         </table>
     </div>
 
-    <input type="submit" name="Menú" onclick="location.href='../menuad.php'" value="Menú">
+    <input type="button" name="Menú" onclick="location.href='../../dashboard-admin.php'" value="Menú">
             <!-- Fin del Contenido Principal -->
 
 

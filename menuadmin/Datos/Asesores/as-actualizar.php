@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
@@ -35,7 +35,7 @@
 
 <body>
     <div class="container-xxl position-relative bg-dark d-flex p-0">
-        
+
         <!-- Sidebar Start -->
         <div class="sidebar pe-4 pb-3">
             <nav class="navbar bg-dark navbar-dark">
@@ -94,11 +94,11 @@
         <div class="content">
             <!-- Inicio-->
             <nav class="navbar navbar-expand bg-dark navbar-dark sticky-top px-4 py-0">
-                
+
                 <a href="#" class="sidebar-toggler flex-shrink-0">
                     <i class="fa fa-bars"></i>
                 </a>
-                
+
                 <div class="navbar-nav align-items-center ms-auto">
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
@@ -144,7 +144,7 @@
 
             <!-- Contenido principal -->
 <h1>Modicando Datos de Asesor Academico</h1>
-    <form action="validar_actualizar.php" method="POST">
+    <form action="./validations/validar_actualizar.php" method="post">
         <label for="">ID asesor</label>
         <input type="text" name="Id_asesor" id="Id_asesor" onblur="buscar_datos();" required><br>
         <label for="">Nombre</label>
@@ -155,7 +155,7 @@
         <input type="text" name="Ap_materno_asesor" id="Ap_materno_asesor" required><br>
         <input type="submit" value="actualizar">
         <input type="submit" id="enviar" name="Enviar" value="Cancelar" onclick="limpiar();">
-        <input type="submit" name="Menú" onclick="location.href='../Asesores/menu_asesores.php'" value="Menú">
+        <input type="button" name="Menú" onclick="location.href='./as-consultar.php'" value="Menú">
     </form>
 </body>
 <script type="text/javascript">
@@ -173,7 +173,7 @@
         {
             data: parametros,
             dataType: 'json',
-            url: 'codigos_php.php',
+            url: './functions/buscar_datos.php',
             type: 'post',
             beforeSend: function()
             {
@@ -210,7 +210,7 @@
 
 
             <!-- Pie de Página -->
-            
+
         <!-- Content End -->
 
 

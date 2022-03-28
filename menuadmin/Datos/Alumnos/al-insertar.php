@@ -143,7 +143,7 @@
 
             <!-- Contenido principal -->
 <body>
-    <h1>Actualizando Alumno</h1>
+    <h1>Insertando Alumno</h1>
     <form action="../Alumnos/validations/validar_insertar.php" method="POST">
  
     <input type="text" id="Matricula" name="Matricula" placeholder="matricula" class="input" onblur="buscar_datos();"><br>

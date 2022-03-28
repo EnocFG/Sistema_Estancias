@@ -145,10 +145,10 @@
             <!-- Contenido principal -->
 <h1>Eliminando Asesor</h1>
     <p>Ingrese el ID del asesor
-        <form action="validar_eliminar.php" method="post">
+        <form action="./validations/validar_eliminar.php" method="post">
             <label for="">ID : <input type="text" name="Id_asesor" id=""></label><br>
             <input type="submit" value="Eliminar">
-            <input type="submit" name="Menú" onclick="location.href='menu_asesores.php'" value="Menú">
+            <input type="button" name="Menú" onclick="location.href='./as-consultar.php'" value="Menú">
         </form>
         
     </p>

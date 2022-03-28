@@ -143,7 +143,7 @@
 
 
             <!-- Contenido principal -->
-            <?php require '../../conexion.php'; ?>
+            <?php require '..\..\conexion.php'; ?>
             <body>
                 <header><h1>Alumnos</h1></header>
                 <div class="container">
@@ -196,7 +196,7 @@
                     </table>
 
                 </div>
-                <input type="submit" name="Menú" onclick="location.href='../menuad.php'" value="Menú">
+                <input type="submit" name="Menú" onclick="location.href='../../dashboard-admin.php'" value="Menú">
             </body>
             <!-- Fin del Contenido Principal -->
 

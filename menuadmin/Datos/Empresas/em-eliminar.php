@@ -147,11 +147,11 @@
         eliminando empresa
     </h1>
 
-    <form action="validar_eliminar.php" method="post">
+    <form action="./validations/validar_eliminar.php" method="post">
         <label for="">Ingrese ID <input type="text" name="id_empresa" id=""></label>
         <input type="submit" value="Eliminar">
     </form>
-    <input type="submit" name="Menú" onclick="location.href='../Empresas/menu_empresas.php'" value="Menú">
+    <input type="button" name="Menú" onclick="location.href='./em-consultar.php'" value="Menú">
             <!-- Fin del Contenido Principal -->
 
 

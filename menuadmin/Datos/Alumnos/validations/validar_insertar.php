@@ -19,7 +19,9 @@ $PA_insertar = "CALL insertar_alumno('$Matricula','$Nombre_alumno','$Ap_paterno_
 '$Domicilio','$Sexo','$IMSS','$CURP','$Correo_electronico','$id_grupo_fk','$id_cuatrimestre_fk','$id_campus_fk')";
 
 if(mysqli_query($conn,$PA_insertar)){
-    require("../../Alumnos/al-consultar.php");
+   header("Location: ../al-consultar.php",TRUE, 301);
+   exit();
+
 
 }else{
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);

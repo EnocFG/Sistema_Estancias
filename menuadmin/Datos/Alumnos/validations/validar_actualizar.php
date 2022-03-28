@@ -18,7 +18,9 @@ $id_campus_fk = $_POST['id_campus_fk'];
 $Actualizar = "CALL actualizar_alumno('$Matricula','$Nombre_alumno','$Ap_paterno_alumno','$Ap_materno_alumno','$Domicilio','$Sexo','$IMSS','$CURP','$Correo_electronico','$id_grupo_fk','$id_cuatrimestre_fk','$id_campus_fk')";
 
 if (mysqli_query($conn, $Actualizar)) {
-    require '../Alumnos/menu_alumnos.php';
+   header("Location: ../al-consultar.php",TRUE, 301);
+   exit();
+
 } else {
     echo 'Error: ' . $sql . '<br>' . mysqli_error($conn);
 }

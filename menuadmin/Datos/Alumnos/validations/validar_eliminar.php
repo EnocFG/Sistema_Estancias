@@ -7,7 +7,9 @@ $Matricula = $_POST['Matricula'];
 $Eliminar = "CALL eliminar_alumno('$Matricula')";
 
 if (mysqli_query($conn,$Eliminar)) {
-   require("../al-eliminar");
+   header("Location: ../al-consultar.php",TRUE, 301);
+   exit();
+
 }
 
 ?>
