@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
@@ -34,7 +34,7 @@
 
 <body>
     <div class="container-xxl position-relative bg-dark d-flex p-0">
-        
+
         <!-- Sidebar Start -->
         <div class="sidebar pe-4 pb-3">
             <nav class="navbar bg-dark navbar-dark">
@@ -93,11 +93,11 @@
         <div class="content">
             <!-- Inicio-->
             <nav class="navbar navbar-expand bg-dark navbar-dark sticky-top px-4 py-0">
-                
+
                 <a href="#" class="sidebar-toggler flex-shrink-0">
                     <i class="fa fa-bars"></i>
                 </a>
-                
+
                 <div class="navbar-nav align-items-center ms-auto">
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
@@ -145,7 +145,7 @@
 <body>
     <h1>Insertando Alumno</h1>
     <form action="../Alumnos/validations/validar_insertar.php" method="POST">
- 
+
     <input type="text" id="Matricula" name="Matricula" placeholder="matricula" class="input" onblur="buscar_datos();"><br>
         <input type="text" id="Nombre_alumno" name="Nombre_alumno" placeholder="nombre" class="input" required><br>
         <input type="text" id="Ap_paterno_alumno" name="Ap_paterno_alumno" placeholder="apellido paterno" class="input" required><br>
@@ -155,7 +155,7 @@
         <input type="text" id="IMSS" name="IMSS" placeholder="num. imss" class="input" required><br>
         <input type="text" id="CURP" name="CURP" placeholder="curp" class="input" required><br>
         <input type="email" id="Correo_electronico" name="Correo_electronico" placeholder="&#64 correo electronico" class="input" required><br>
-        <input type="text" id="id_grupo_fk" name="id_grupo_fk" placeholder="id_grupo" class="input" required><br>        
+        <input type="text" id="id_grupo_fk" name="id_grupo_fk" placeholder="id_grupo" class="input" required><br>
         <input type="text" id="id_cuatrimestre_fk" name="id_cuatrimestre_fk" placeholder="id_cuatrimestre" class="input" required><br>
         <input type="text" id="id_campus_fk" name="id_campus_fk" placeholder="id_campus" class="input" required><br>
         <br>
@@ -168,11 +168,11 @@
 <script type="text/javascript">
       $(document).ready(function(){
         $('.cargando').hide(); //ocultar
-      });  
+      });
     function buscar_datos(){
-        
+
         Matricula = $("#Matricula").val();
-    
+
     var parametros =
     {
       "buscar": "1",
@@ -189,7 +189,7 @@
       {
           $('.formulario').hide();
           $('.cargando').show();
-          
+
         },
       error: function()
       {
@@ -212,13 +212,13 @@
         $("#Correo_electronico").val(valores.Correo_electronico);
         $("#id_grupo_fk").val(valores.id_grupo_fk);
         $("#id_cuatrimestre_fk").val(valores.id_cuatrimestre_fk);
-        $("#id_campus_fk").val(valores.id_campus_fk);   
+        $("#id_campus_fk").val(valores.id_campus_fk);
       }
     })
     }
   function limpiar()
   {
-        $("#Matricula").val("");    
+        $("#Matricula").val("");
         $("#Nombre_alumno").val("");
         $("#Ap_paterno_alumno").val("");
         $("#Ap_materno_alumno").val("");
@@ -234,13 +234,13 @@
   }
         //
 
-  
+
 </script>
             <!-- Fin del Contenido Principal -->
 
 
             <!-- Pie de Página -->
-            
+
         <!-- Content End -->
 
 

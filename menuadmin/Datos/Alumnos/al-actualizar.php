@@ -143,21 +143,23 @@
 
 
             <!-- Contenido principal -->
-            <h1>Consultar Alumnos</h1>
-            <form action="validar_actualizar.php" method="GET">
-                <label for="">Matricula  <input type="text" name="Matricula" id=""></label><br>
-                <label for="">Nombre <input type="text" name="Nombre_alumno" id=""></label><br>
-                <label for="">Apellido Paterno <input type="text" name="Ap_paterno_alumno" id=""></label><br>
-                <label for="">Apellido Materno <input type="text" name="Ap_materno_alumno" id=""></label><br>
-                <label for="">Domicilio <input type="text" name="Domicilio" id=""></label><br>
-                <label for="">Sexo <input type="text" name="Sexo" id=""></label><br>
-                <label for="">IMSS <input type="text" name="IMSS" id=""></label><br>
-                <label for="">CURP <input type="text" name="CURP" id=""></label><br>
-                <label for="">Correo <input type="text" name="Correo_electronico" id=""></label><br>
-                <label for="">ID grupo <input type="text" name="id_grupo_fk" id=""></label><br>
-                <label for="">ID cuatrimestre <input type="text" name="id_cuatrimestre_fk" id=""></label><br>
-                <label for="">ID campus <input type="text" name="id_campus_fk" id=""></label><br>
-                <input type="submit" value="actualizar">
+            <h1>Actualizar Alumno</h1>
+            <form action="./validations/validar_actualizar.php" method="post">
+                <input type="text" id="Matricula" name="Matricula" placeholder="matricula" class="input" onblur="buscar_datos();"><br>
+                <input type="text" id="Nombre_alumno" name="Nombre_alumno" placeholder="nombre" class="input" required><br>
+                <input type="text" id="Ap_paterno_alumno" name="Ap_paterno_alumno" placeholder="apellido paterno" class="input" required><br>
+                <input type="text" id="Ap_materno_alumno" name="Ap_materno_alumno" placeholder="apellido materno" class="input" required><br>
+                <input type="text" id="Domicilio" name="Domicilio" placeholder="domicilio" class="input" required><br>
+                <input type="text" id="Sexo" name="Sexo" placeholder="sexo" class="input" required><br>
+                <input type="text" id="IMSS" name="IMSS" placeholder="num. imss" class="input" required><br>
+                <input type="text" id="CURP" name="CURP" placeholder="curp" class="input" required><br>
+                <input type="email" id="Correo_electronico" name="Correo_electronico" placeholder="&#64 correo electronico" class="input" required><br>
+                <input type="text" id="id_grupo_fk" name="id_grupo_fk" placeholder="id_grupo" class="input" required><br>
+                <input type="text" id="id_cuatrimestre_fk" name="id_cuatrimestre_fk" placeholder="id_cuatrimestre" class="input" required><br>
+                <input type="text" id="id_campus_fk" name="id_campus_fk" placeholder="id_campus" class="input" required><br>
+                <br>
+                <input type="submit" value="Actualizar">
+                <input type="button" id="Cancelar" name="Cancelar" value="Cancelar" onclick="limpiar();">
                 <input type="button" name="Menú" onclick="location.href='../../dashboard-admin.php'" value="Menú">
             </form>
 <script type="text/javascript">

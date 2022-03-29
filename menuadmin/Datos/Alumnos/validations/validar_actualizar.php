@@ -1,7 +1,6 @@
 <?php
 
-include '../../conexion.php';
-
+include '../../../conexion.php';
 $Matricula = $_POST['Matricula'];
 $Nombre_alumno = $_POST['Nombre_alumno'];
 $Ap_paterno_alumno = $_POST['Ap_paterno_alumno'];

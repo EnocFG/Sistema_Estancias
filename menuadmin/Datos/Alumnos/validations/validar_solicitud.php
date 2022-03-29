@@ -1,6 +1,6 @@
 <?php
 
-require'../../conexion.php';
+require'../../../conexion.php';
 
 $id_solicitud = $_POST['id_solicitud'];
 $Nombre_alumno_sol = $_POST['Nombre_alumno_sol'];
