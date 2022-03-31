@@ -1,4 +1,7 @@
 {
   "git.ignoreLimitWarning": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[php]": {
+    "editor.defaultFormatter": "animus-coop.vscode-phpstorm-formatter"
+  }
 }
