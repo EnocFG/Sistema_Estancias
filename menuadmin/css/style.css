@@ -137,7 +137,7 @@
     color: var(--primary);
     background: #191c24;
     border-color: var(--primary);
-    
+
 }
 
 .sidebar .navbar .navbar-nav .nav-link i {
@@ -196,7 +196,7 @@
     justify-content: center;
     background: #191c24;
     border-radius: 40px;
-    color:rgb(118, 160, 109);
+    color: rgb(118, 160, 109);
 }
 
 .content .navbar .dropdown-toggle::after {
@@ -278,14 +278,17 @@
     background: var(--dark);
     border-color: var(--primary);
 }
-::-webkit-scrollbar{
+
+::-webkit-scrollbar {
     width: 10px;
-  }
-  ::-webkit-scrollbar-track{
+}
+
+::-webkit-scrollbar-track {
     background: #242930;
     border-radius: 50px;
-  }
-  ::-webkit-scrollbar-thumb{
+}
+
+::-webkit-scrollbar-thumb {
     background: #525c66;
     border-radius: 50px;
-  }
+}

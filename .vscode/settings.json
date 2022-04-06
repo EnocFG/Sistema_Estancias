@@ -3,5 +3,9 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[php]": {
     "editor.defaultFormatter": "animus-coop.vscode-phpstorm-formatter"
+  },
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
   }
 }

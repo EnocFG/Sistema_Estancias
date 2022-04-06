@@ -1,21 +1,24 @@
-html{
+html {
     padding: 0px;
     margin: 0px;
 }
-body{
+
+body {
     background-color: #242930;
     padding: 0px;
     margin: 0px;
     padding-top: 80px;
 }
-h1{
+
+h1 {
     color: white;
     font-size: 25px;
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
-.login{
+
+.login {
     background-color: rgb(118, 160, 109);
     padding: 20px 20px;
     margin-top: auto;
@@ -28,14 +31,15 @@ h1{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    box-shadow:0 0 20px 0 #000;
+    box-shadow: 0 0 20px 0 #000;
     border-radius: 20px;
     border: 2px solid gray;
 
     text-align: center;
     display: block;
 }
-.login input{
+
+.login input {
     width: 90%;
     height: 30px;
     margin: 0.3rem;
@@ -49,11 +53,13 @@ h1{
     outline: none;
     display: block;
 }
-.login input:focus{
+
+.login input:focus {
     width: 330px;
     border-color: yellowgreen;
 }
-.login button{
+
+.login button {
     margin: 1rem;
     padding: 0.5em 1em;
     border: none;
@@ -65,16 +71,17 @@ h1{
     height: 40px;
 
     box-shadow: 0 0 40px 40px #8a540b inset, 0 0 0 0 #8a540b;
-  -webkit-transition: all 150ms ease-in-out;
-  transition: all 150ms ease-in-out;
-}
-.login button:hover {
-  box-shadow: 0 0 3px 0 transparent inset, 0 0 1px 2px rgba(0, 0, 0, 0.397);
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
 }
 
-.modal-container{
+.login button:hover {
+    box-shadow: 0 0 3px 0 transparent inset, 0 0 1px 2px rgba(0, 0, 0, 0.397);
+}
+
+.modal-container {
     display: flex;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0, 0, 0, 0.3);
     align-items: center;
     justify-content: center;
     position: fixed;
@@ -85,14 +92,17 @@ h1{
     height: 100vh;
     width: 100vh;
 }
-::-webkit-scrollbar{
+
+::-webkit-scrollbar {
     width: 10px;
 }
-::-webkit-scrollbar-track{
+
+::-webkit-scrollbar-track {
     background: #242930;
     border-radius: 50px;
 }
-::-webkit-scrollbar-thumb{
+
+::-webkit-scrollbar-thumb {
     background: #525c66;
     border-radius: 50px;
 }
